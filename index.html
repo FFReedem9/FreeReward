@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Fire Elite Pass - ₹500 Google Play Reward</title>
+<title>Free Fire - Exclusive ₹500 Redeem Code Event</title>
 
 <style>
 :root {
-    --ff-neon-cyan: #00f0ff;
-    --ff-neon-orange: #ff4500;
-    --ff-gold: #ffd700;
-    --ff-bg: #060913;
-    --ff-panel: #0d1424;
-    --ff-border: #1e293b;
+    --ff-dark-bg: #05070d;
+    --ff-panel-bg: #0f172a;
+    --ff-orange: #ff4500;
+    --ff-gold: #ffb703;
+    --ff-cyan: #00f2fe;
+    --ff-green: #10b981;
 }
 
 *{
@@ -23,10 +23,10 @@
 
 body{
     font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-    background: var(--ff-bg);
+    background: var(--ff-dark-bg);
     background-image: 
-        radial-gradient(circle at 50% 0%, #172554 0%, transparent 50%),
-        radial-gradient(circle at 10% 90%, #1e1b4b 0%, transparent 40%);
+        radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 60%),
+        radial-gradient(circle at 50% 100%, #090d16 0%, transparent 60%);
     color: #ffffff;
     padding-bottom: 35px;
     user-select: none;
@@ -40,38 +40,43 @@ body{
     padding: 12px;
 }
 
-/* GAMING EVENT HEADER TITLE */
-.game-header {
-    background: linear-gradient(135deg, #0f172a, #1e1b4b);
-    border: 2px solid var(--ff-neon-cyan);
-    border-radius: 14px;
+/* FAST FLASHING HEADER */
+.ff-lobby-header {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 2px solid var(--ff-gold);
+    border-radius: 12px;
     padding: 14px;
     text-align: center;
     margin-bottom: 12px;
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+    box-shadow: 0 0 15px rgba(255, 183, 3, 0.4);
+    animation: borderGlow 1s infinite alternate;
 }
 
-.game-header h1 {
-    font-size: 18px;
+@keyframes borderGlow {
+    0% { border-color: var(--ff-gold); box-shadow: 0 0 10px rgba(255, 183, 3, 0.3); }
+    100% { border-color: var(--ff-orange); box-shadow: 0 0 20px rgba(255, 69, 0, 0.7); }
+}
+
+.ff-lobby-header h1 {
+    font-size: 19px;
     font-weight: 900;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #00f0ff, #ffd700);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--ff-gold);
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
-.game-header p {
+.ff-lobby-header p {
     font-size: 11px;
-    color: #94a3b8;
+    color: #93c5fd;
+    font-weight: 700;
     margin-top: 4px;
-    font-weight: 600;
 }
 
 /* LIVE TICKER */
 .ticker {
-    background: rgba(16, 185, 129, 0.12);
-    border: 1px solid #10b981;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid var(--ff-green);
     color: #34d399;
     padding: 8px 12px;
     border-radius: 20px;
@@ -81,22 +86,30 @@ body{
     margin-bottom: 10px;
 }
 
-/* URGENCY STOCK BAR */
+/* FAST BLINKING STOCK ALERT */
 .stock-bar {
     background: linear-gradient(90deg, #991b1b, #dc2626);
     color: #fff;
     text-align: center;
     font-size: 11px;
-    font-weight: 800;
-    padding: 7px;
+    font-weight: 900;
+    padding: 8px;
     border-radius: 8px;
     margin-bottom: 12px;
-    box-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
+    border: 1px solid #f87171;
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+    animation: fastBlink 0.8s infinite;
+}
+
+@keyframes fastBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
 }
 
 /* TIMER BAR */
 .timer-bar {
-    background: #1e293b;
+    background: rgba(239, 68, 68, 0.15);
     border: 1px solid #ef4444;
     color: #fca5a5;
     text-align: center;
@@ -107,7 +120,7 @@ body{
     margin-bottom: 12px;
 }
 
-/* VIDEO CONTAINER WITH GAMING BORDER */
+/* VIDEO BOX */
 .video-box{
     position: relative;
     width: 100%;
@@ -115,8 +128,8 @@ body{
     border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
-    border: 2px solid var(--ff-neon-orange);
-    box-shadow: 0 0 25px rgba(255, 69, 0, 0.35);
+    border: 2px solid var(--ff-orange);
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.4);
 }
 
 .video-box video{
@@ -139,30 +152,84 @@ body{
     position: absolute;
     top: 10px;
     right: 10px;
-    background: rgba(255, 69, 0, 0.95);
+    background: var(--ff-orange);
     color: #ffffff;
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 11px;
     font-weight: 900;
-    box-shadow: 0 0 12px var(--ff-neon-orange);
-    animation: soundPulse 1.2s infinite;
+    box-shadow: 0 0 12px var(--ff-orange);
+    animation: soundPulse 0.9s infinite;
     z-index: 10;
     pointer-events: none;
 }
 
 @keyframes soundPulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.06); }
+    50% { transform: scale(1.08); }
     100% { transform: scale(1); }
 }
 
-/* REWARD CARD - GAMING ITEM STYLE */
+/* CLICKABLE LOCKED CODE BOX (TRACKING LINK EMBEDDED) */
+.unlocked-box {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95));
+    border: 2px dashed var(--ff-gold);
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    margin-bottom: 16px;
+    box-shadow: 0 0 15px rgba(255, 183, 3, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.unlocked-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 183, 3, 0.6);
+}
+
+.unlocked-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--ff-gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.code-display {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 900;
+    color: #f87171;
+    background: #180808;
+    padding: 10px;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    border: 1px solid #ef4444;
+    filter: blur(4px);
+}
+
+.unlock-instruction {
+    font-size: 11px;
+    color: #38bdf8;
+    font-weight: 700;
+    margin-top: 8px;
+    animation: textFlash 1s infinite alternate;
+}
+
+@keyframes textFlash {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* REWARD CARD */
 .offer-card {
-    background: var(--ff-panel);
+    background: var(--ff-panel-bg);
     border-radius: 14px;
     padding: 14px;
-    border: 2px solid rgba(0, 240, 255, 0.3);
+    border: 2px solid var(--ff-cyan);
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     margin-bottom: 16px;
 }
@@ -185,7 +252,7 @@ body{
 }
 
 .tag-cyan {
-    background: var(--ff-neon-cyan);
+    background: var(--ff-cyan);
     color: #000;
     font-size: 9px;
     font-weight: 900;
@@ -210,8 +277,8 @@ body{
     height: auto;
     border-radius: 10px;
     display: block;
-    box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
-    border: 1px solid var(--ff-neon-cyan);
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
+    border: 1px solid var(--ff-cyan);
 }
 
 .offer-info {
@@ -231,7 +298,7 @@ body{
 .subtitle {
     font-size: 11px;
     font-weight: 700;
-    color: var(--ff-neon-cyan);
+    color: var(--ff-cyan);
     margin-bottom: 4px;
 }
 
@@ -241,38 +308,44 @@ body{
     margin-bottom: 10px;
 }
 
+/* SUPER FAST ANIMATED CLAIM BUTTON */
 .claim-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     width: 100%;
-    padding: 12px 6px;
+    padding: 13px 6px;
     border-radius: 8px;
-    background: linear-gradient(90deg, #ff4500, #ffd700);
+    background: linear-gradient(90deg, #ff4500, #ffb703, #ff4500);
+    background-size: 200% auto;
     color: #000000;
     text-align: center;
     text-decoration: none;
     font-size: 13px;
     font-weight: 900;
     text-transform: uppercase;
-    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
-    animation: btnPulse 1.5s infinite;
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);
+    animation: btnShine 1s linear infinite, btnBounce 0.8s ease-in-out infinite alternate;
 }
 
-@keyframes btnPulse {
+@keyframes btnShine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+@keyframes btnBounce {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-    100% { transform: scale(1); }
+    100% { transform: scale(1.04); }
 }
 
-/* LIVE PLAYERS COUNTER */
+/* LIVE PLAYERS */
 .users-box {
     text-align: center;
     padding: 14px;
-    background: var(--ff-panel);
+    background: var(--ff-panel-bg);
     border-radius: 12px;
-    border: 1px solid rgba(0, 240, 255, 0.2);
+    border: 1px solid rgba(0, 242, 254, 0.2);
     margin-bottom: 16px;
 }
 
@@ -285,30 +358,30 @@ body{
 .users-number {
     font-size: 28px;
     font-weight: 900;
-    color: var(--ff-neon-cyan);
+    color: var(--ff-cyan);
     margin: 4px 0;
 }
 
 /* ROTATING FEEDBACK */
 .reviews-card {
-    background: var(--ff-panel);
+    background: var(--ff-panel-bg);
     border-radius: 12px;
     padding: 14px;
-    border: 1px solid rgba(0, 240, 255, 0.2);
+    border: 1px solid rgba(0, 242, 254, 0.2);
     margin-bottom: 16px;
 }
 
 .reviews-title {
     font-size: 13px;
     font-weight: 800;
-    color: var(--ff-neon-cyan);
+    color: var(--ff-cyan);
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .review-item {
     padding: 4px 0;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
 }
 
 .fade-out {
@@ -339,9 +412,9 @@ body{
 
 <div class="container">
 
-    <div class="game-header">
-        <h1>⚡ FREE FIRE ELITE REWARD CENTER ⚡</h1>
-        <p>Claim Your Official ₹500 Google Play Code Instantly</p>
+    <div class="ff-lobby-header">
+        <h1>⚡ FREE FIRE REWARD CENTER ⚡</h1>
+        <p>Official Google Play ₹500 Code Event</p>
     </div>
 
     <div class="ticker" id="ticker">
@@ -366,10 +439,17 @@ body{
         </video>
     </div>
 
+    <!-- CLICKABLE LOCKED CODE BOX WITH TRACKING LINK -->
+    <a href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7" class="unlocked-box">
+        <div class="unlocked-title">🔒 YOUR REDEEM CODE IS LOCKED</div>
+        <div class="code-display" id="generatedCode">FF500-XXXX-XXXX</div>
+        <div class="unlock-instruction">👉 Tap Here to Unlock Full Code Instantly</div>
+    </a>
+
     <div class="offer-card">
         <div class="offer-tags">
-            <span class="tag-gold">ELITE REWARD</span>
-            <span class="tag-cyan">100% VERIFIED</span>
+            <span class="tag-gold">INSTANT DROP</span>
+            <span class="tag-cyan">VERIFIED</span>
         </div>
 
         <div class="offer-body">
@@ -451,19 +531,31 @@ function unlockSoundAndPlay() {
 window.addEventListener('touchstart', unlockSoundAndPlay, { once: true });
 window.addEventListener('click', unlockSoundAndPlay, { once: true });
 
+// Fast Glitch Animation for Locked Code
+const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+setInterval(() => {
+    let part1 = '';
+    let part2 = '';
+    for(let i=0; i<4; i++) {
+        part1 += chars.charAt(Math.floor(Math.random() * chars.length));
+        part2 += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    document.getElementById("generatedCode").innerText = `FF500-${part1}-${part2}`;
+}, 1500);
+
 // Live User Counter
 let users = 1284;
 setInterval(function(){
     users += Math.floor(Math.random() * 4) + 1;
     document.getElementById("users").innerText = users.toLocaleString();
-}, 4000);
+}, 3000);
 
 // Fake Recent Claims Ticker
 const names = ["Rahul_FF", "Op_Gaming", "Viper_88", "Sameer_Pro", "Karan_007", "Rohan_Pro", "Sumit_Gamer"];
 setInterval(function(){
     const randomName = names[Math.floor(Math.random() * names.length)];
     document.getElementById("recent-user").innerText = randomName;
-}, 3500);
+}, 3000);
 
 // Rotating Feedback List
 const feedbacks = [
@@ -489,9 +581,9 @@ setInterval(function() {
             userEl.innerText = feedbacks[fbIndex].user;
             textEl.innerText = feedbacks[fbIndex].text;
             container.classList.remove("fade-out");
-        }, 500);
+        }, 400);
     }
-}, 4000);
+}, 3500);
 
 // Decrement Stock Counter
 let stock = 7;
@@ -500,7 +592,7 @@ setInterval(function(){
         stock--;
         document.getElementById("stock-count").innerText = stock;
     }
-}, 9000);
+}, 8000);
 
 // Timer Script
 let time = 299;
