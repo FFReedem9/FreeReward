@@ -1,142 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unlock Redeem Code</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom glow & shimmer animations */
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(22, 131, 255, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(0, 91, 234, 0.8); }
-        }
-        .animate-glow {
-            animation: pulse-glow 2s infinite;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unlock Redeem Code</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #20252d;
+}
+
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 14px;
+}
+
+.header{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0 16px;
+    color: #111827;
+}
+
+/* VIDEO CONTAINER */
+.video-box{
+    width: 100%;
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-box video{
+    width: 100%;
+    display: block;
+}
+
+/* MAIN OFFER CARD (EXACTLY MATCHING ORIGINAL WEBSITE) */
+.offer-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+    margin-bottom: 18px;
+}
+
+/* BADGES AT TOP RIGHT */
+.offer-tags {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.tag-yellow {
+    background: #eab308;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.tag-orange {
+    background: #ff5722;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+/* FLEX CONTENT: IMAGE LEFT + DETAILS RIGHT */
+.offer-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* LEFT SIDE IMAGE */
+.offer-image {
+    width: 38%;
+    max-width: 130px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+/* RIGHT SIDE DETAILS */
+.offer-details {
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-title {
+    font-size: 16px;
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.25;
+    margin-bottom: 3px;
+}
+
+.subtitle {
+    font-size: 11px;
+    font-weight: 700;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* CLAIM BUTTON INSIDE SIDE-BY-SIDE SECTION */
+.claim {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 10px 6px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #1683ff, #005bea);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 4px 14px rgba(0, 91, 234, 0.35);
+    transition: transform 0.2s;
+}
+
+.claim:active {
+    transform: scale(0.98);
+}
+
+/* LIVE USERS COUNTER */
+.users{
+    text-align: center;
+    margin-top: 18px;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+}
+
+.users-title{
+    font-size: 13px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+.users-number{
+    font-size: 28px;
+    font-weight: 900;
+    color: #111827;
+    margin: 4px 0;
+}
+
+.notice{
+    text-align: center;
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 18px 5px;
+}
+</style>
 </head>
-<body class="bg-gray-100 font-sans text-gray-800 min-h-screen flex flex-col items-center justify-start p-3 sm:p-6">
 
-    <main class="w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        🤑 Watch How to Claim Redeem Code !!
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video-box">
+        <video controls autoplay muted loop playsinline>
+            <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- MAIN OFFER BOX (ORIGINAL SIDE-BY-SIDE DESIGN) -->
+    <div class="offer-box">
         
-        <!-- Header Banner -->
-        <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 text-center">
-            <h1 class="text-lg sm:text-xl font-extrabold flex items-center justify-center gap-2">
-                <span>🤑</span> Watch How to Claim Redeem Code !!
-            </h1>
-        </header>
-
-        <div class="p-4 space-y-4">
-            
-            <div class="relative w-full bg-black rounded-xl overflow-hidden aspect-video shadow-inner group">
-                <video id="tutorialVideo" controls autoplay muted loop playsinline class="w-full h-full object-cover">
-                    <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- Fallback overlay if video fails to load in preview -->
-                <div id="videoFallback" class="hidden absolute inset-0 bg-slate-900 flex flex-col items-center justify-center text-white p-4 text-center">
-                    <svg class="w-12 h-12 text-blue-400 mb-2 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span class="text-xs font-semibold text-gray-300">Video Demonstration Preview</span>
-                </div>
-            </div>
-
-            <!-- Subtitle badge -->
-            <div class="text-center">
-                <span class="inline-block bg-blue-50 text-blue-700 font-bold text-xs uppercase tracking-wider px-3 py-1 rounded-full border border-blue-200">
-                    LIMITED TIME GOOGLE PLAY REWARD
-                </span>
-            </div>
-
-            <!-- Side-by-Side Card Layout -->
-            <div class="bg-gradient-to-br from-slate-50 to-blue-50/30 p-3 rounded-xl border border-gray-200 shadow-sm flex items-center gap-3">
-                
-                <!-- Left: Offer Image -->
-                <div class="w-2/5 flex-shrink-0 relative">
-                    <img 
-                        src="https://placehold.co/300x300/005bea/ffffff?text=Google+Play%0A%E2%82%B9500" 
-                        alt="Google Play Redeem Code" 
-                        class="w-full h-auto rounded-lg object-cover shadow border border-gray-100"
-                        onerror="this.onerror=null; this.src='https://placehold.co/300x300/1683ff/ffffff?text=%E2%82%B9500+Code';"
-                    >
-                    <span class="absolute top-1 left-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
-                        HOT
-                    </span>
-                </div>
-
-                <!-- Right: Details & Action Button -->
-                <div class="w-3/5 flex flex-col justify-between space-y-1.5">
-                    <div>
-                        <h2 class="text-base font-black text-gray-900 leading-tight">
-                            Get ₹500 Code!
-                        </h2>
-                        <p class="text-[11px] font-bold text-gray-500 uppercase tracking-wide mt-0.5">
-                            Google Play Gift Card
-                        </p>
-                    </div>
-
-                    <div class="text-yellow-400 text-sm tracking-wider">
-                        ★★★★★
-                    </div>
-
-                    <!-- Claim Button -->
-                    <a 
-                        href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="claim-btn animate-glow block w-full py-2.5 px-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-center rounded-lg font-black text-xs sm:text-sm tracking-wide shadow-md transition-transform active:scale-95"
-                    >
-                        🎁 CLAIM CODE NOW
-                    </a>
-                </div>
-            </div>
-
-            <!-- Live Users Section -->
-            <div class="bg-gray-50 border border-gray-200 rounded-xl p-3 text-center shadow-inner">
-                <div class="text-xs text-gray-500 font-medium">
-                    Live Users Claiming Redeem Code
-                </div>
-                <div id="users" class="text-2xl font-black text-blue-600 my-0.5 tracking-tight">
-                    1,284
-                </div>
-                <div class="flex items-center justify-center gap-1.5 text-[11px] text-emerald-600 font-semibold">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                    <span>Live Active Users Online</span>
-                </div>
-            </div>
-
-            <!-- Disclaimer Notice -->
-            <p class="text-[10px] text-center text-gray-400 leading-relaxed px-2">
-                Promotional page. Offer availability and eligibility may vary based on region.
-            </p>
-
+        <!-- TOP RIGHT BADGES -->
+        <div class="offer-tags">
+            <span class="tag-yellow">LIMITED TIME</span>
+            <span class="tag-orange">FREE FIRE TOP UP</span>
         </div>
-    </main>
 
-    <script>
-        // Live counter increment logic
-        let users = 1284;
-        const userCounterEl = document.getElementById("users");
+        <div class="offer-content">
+            <!-- IMAGE (LEFT) -->
+            <img class="offer-image" src="google-play-redeem.png" alt="Google Play Redeem Code">
 
-        setInterval(() => {
-            users += Math.floor(Math.random() * 3) + 1;
-            if (userCounterEl) {
-                userCounterEl.innerText = users.toLocaleString();
-            }
-        }, 3500);
+            <!-- DETAILS & BUTTON (RIGHT) -->
+            <div class="offer-details">
+                <div class="code-title">
+                    Get ₹500 Redeem Code !!
+                </div>
 
-        // Video fallback handling for local file loading errors
-        const video = document.getElementById("tutorialVideo");
-        const fallback = document.getElementById("videoFallback");
+                <div class="subtitle">
+                    GOOGLE PLAY REDEEM CODE
+                </div>
 
-        if (video && fallback) {
-            video.addEventListener("error", () => {
-                fallback.classList.remove("hidden");
-            });
-        }
-    </script>
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <!-- TRACKING LINK BUTTON -->
+                <a class="claim" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
+                    🎁 CLAIM REDEEM CODE
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LIVE USERS SECTION -->
+    <div class="users">
+        <div class="users-title">
+            Live Users Claim Redeem Code
+        </div>
+
+        <div class="users-number" id="users">
+            1,284
+        </div>
+
+        <div class="users-title">
+            Live Users
+        </div>
+    </div>
+
+    <div class="notice">
+        Promotional page. Offer availability and eligibility may vary.
+    </div>
+
+</div>
+
+<script>
+let users = 1284;
+
+setInterval(function(){
+    users += Math.floor(Math.random() * 3);
+    document.getElementById("users").innerText =
+        users.toLocaleString();
+}, 5000);
+</script>
+
 </body>
 </html>
