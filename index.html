@@ -47,15 +47,28 @@ body{
     font-size: 11px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* ANIMATED HEADER TITLE */
+/* STOCK ALERT BAR (FOMO) */
+.stock-bar {
+    background: linear-gradient(90deg, #dc2626, #b91c1c);
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
+}
+
+/* HEADER TITLE */
 .header{
     text-align: center;
     font-size: 19px;
     font-weight: 900;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     padding: 12px;
     background: linear-gradient(135deg, rgba(30,41,59,0.9), rgba(15,23,42,0.9));
     border-radius: 14px;
@@ -82,7 +95,7 @@ body{
     margin-bottom: 12px;
 }
 
-/* VIDEO CONTAINER WITH TOUCH OVERLAY */
+/* VIDEO CONTAINER WITH TOUCH MASK */
 .video-box{
     position: relative;
     width: 100%;
@@ -100,7 +113,6 @@ body{
     object-fit: cover;
 }
 
-/* INVISIBLE TOUCH MASK TO PREVENT PAUSE */
 .video-touch-mask {
     position: absolute;
     top: 0;
@@ -111,7 +123,6 @@ body{
     background: transparent;
 }
 
-/* SOUND BADGE */
 .unmute-badge {
     position: absolute;
     top: 12px;
@@ -243,6 +254,7 @@ body{
     100% { transform: scale(1); }
 }
 
+/* LIVE USERS */
 .users-box {
     text-align: center;
     padding: 16px;
@@ -265,6 +277,44 @@ body{
     margin: 4px 0;
 }
 
+/* REVIEWS SECTION FOR TRUST BUILD */
+.reviews-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 14px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 16px;
+}
+
+.reviews-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #00f2fe;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.review-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 0;
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-user {
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffb400;
+}
+
+.review-text {
+    font-size: 11px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
 .notice {
     text-align: center;
     font-size: 10px;
@@ -281,6 +331,10 @@ body{
         🔥 Recent Claim: <span id="recent-user">Aman_FF</span> just claimed ₹500 Code!
     </div>
 
+    <div class="stock-bar">
+        ⚠️ ONLY <span id="stock-count">7</span> REDEEM CODES LEFT TODAY!
+    </div>
+
     <div class="header">
         🤑 <span>Watch & Claim ₹500 Redeem Code !!</span>
     </div>
@@ -294,6 +348,7 @@ body{
             🔊 Tap Anywhere For Sound
         </div>
         <div class="video-touch-mask"></div>
+        <!-- Aapki original video file yahan set hai -->
         <video id="myVideo" autoplay muted loop playsinline preload="auto">
             <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
         </video>
@@ -309,7 +364,7 @@ body{
             <div class="offer-image-wrap">
                 <img 
                     src="google-play-redeem.jpg" 
-                    onerror="this.onerror=null; this.src='google-play-redeem.png'; this.onerror=function(){this.src='https://i.ibb.co/6YhM86C/google-play-card.jpg';}" 
+                    onerror="this.onerror=null; this.src='google-play-redeem.png';" 
                     alt="Google Play Redeem Code">
             </div>
 
@@ -326,7 +381,7 @@ body{
                     ★★★★★ <span style="font-size: 10px; color: #94a3b8;">(4.9)</span>
                 </div>
 
-                <a class="claim-btn" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
+                <a class="claim-btn" id="claimBtn" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
                     🎁 CLAIM REDEEM CODE
                 </a>
             </div>
@@ -342,6 +397,22 @@ body{
         </div>
         <div class="users-title">
             Verified Claims Today
+        </div>
+    </div>
+
+    <div class="reviews-card">
+        <div class="reviews-title">💬 Live User Feedback</div>
+        <div class="review-item">
+            <div class="review-user">★ Sameer_FF (Verified)</div>
+            <div class="review-text">Bhai sach me 500 ka code mil gaya video dekhne ke baad! 🔥</div>
+        </div>
+        <div class="review-item">
+            <div class="review-user">★ GamingWithRohan</div>
+            <div class="review-text">Mera Free Fire weekly pass buy ho gaya, thanks bro! 🎁</div>
+        </div>
+        <div class="review-item">
+            <div class="review-user">★ OP_Rajesh</div>
+            <div class="review-text">Fast delivery, 2 minute me redeem kar liya.</div>
         </div>
     </div>
 
@@ -368,27 +439,34 @@ function unlockSoundAndPlay() {
             });
         }
     }
+    if ("vibrate" in navigator) {
+        navigator.vibrate(50);
+    }
 }
 
-// Phone touch & tap listeners
 window.addEventListener('touchstart', unlockSoundAndPlay, { once: true });
 window.addEventListener('click', unlockSoundAndPlay, { once: true });
 
-// Live User Counter
 let users = 1284;
 setInterval(function(){
     users += Math.floor(Math.random() * 4) + 1;
     document.getElementById("users").innerText = users.toLocaleString();
 }, 4000);
 
-// Fake Recent Claims Ticker
 const names = ["Rahul_FF", "Op_Gaming", "Viper_88", "Sameer_Pro", "Karan_007", "Rohan_Pro", "Sumit_Gamer"];
 setInterval(function(){
     const randomName = names[Math.floor(Math.random() * names.length)];
     document.getElementById("recent-user").innerText = randomName;
 }, 3500);
 
-// Timer Script
+let stock = 7;
+setInterval(function(){
+    if(stock > 2) {
+        stock--;
+        document.getElementById("stock-count").innerText = stock;
+    }
+}, 9000);
+
 let time = 299;
 setInterval(function(){
     let minutes = Math.floor(time / 60);
