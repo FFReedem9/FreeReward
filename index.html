@@ -26,7 +26,8 @@ body{
     background: var(--bg-dark);
     color: #ffffff;
     padding-bottom: 30px;
-    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .container{
@@ -81,7 +82,7 @@ body{
     margin-bottom: 12px;
 }
 
-/* VIDEO PLAYER CONTAINER */
+/* VIDEO CONTAINER WITH TOUCH OVERLAY */
 .video-box{
     position: relative;
     width: 100%;
@@ -96,20 +97,32 @@ body{
 .video-box video{
     width: 100%;
     display: block;
+    object-fit: cover;
 }
 
-/* SOUND OVERLAY BADGE */
+/* INVISIBLE TOUCH MASK TO PREVENT PAUSE */
+.video-touch-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: transparent;
+}
+
+/* SOUND BADGE */
 .unmute-badge {
     position: absolute;
     top: 12px;
     right: 12px;
     background: rgba(255, 87, 34, 0.95);
     color: #ffffff;
-    padding: 6px 12px;
+    padding: 8px 14px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
-    box-shadow: 0 0 10px rgba(255, 87, 34, 0.8);
+    box-shadow: 0 0 12px rgba(255, 87, 34, 0.9);
     animation: soundPulse 1.2s infinite;
     z-index: 10;
     pointer-events: none;
@@ -276,11 +289,12 @@ body{
         ⚡ LIMITED TIME OFFER: EXPIRES IN <span id="timer">04:59</span> MINS
     </div>
 
-    <div class="video-box">
-        <div class="unmute-badge" id="unmute-badge">
+    <div class="video-box" id="videoBox">
+        <div class="unmute-badge" id="unmuteBadge">
             🔊 Tap Anywhere For Sound
         </div>
-        <video id="myVideo" autoplay muted loop playsinline controls>
+        <div class="video-touch-mask"></div>
+        <video id="myVideo" autoplay muted loop playsinline preload="auto">
             <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
         </video>
     </div>
@@ -339,19 +353,26 @@ body{
 
 <script>
 const video = document.getElementById('myVideo');
-const badge = document.getElementById('unmute-badge');
+const badge = document.getElementById('unmuteBadge');
 
-// Global Click Listener - Kahin par bhi tap/click hone par sound unmute ho jayega
-function enableAudioGlobally() {
-    if (video.muted) {
+function unlockSoundAndPlay() {
+    if (video) {
         video.muted = false;
-        video.play().catch(()=>{});
-        if(badge) badge.style.display = 'none';
+        video.volume = 1.0;
+        let playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                if(badge) badge.style.display = 'none';
+            }).catch(error => {
+                console.log("Autoplay error: ", error);
+            });
+        }
     }
 }
 
-document.addEventListener('click', enableAudioGlobally, { once: true });
-document.addEventListener('touchstart', enableAudioGlobally, { once: true });
+// Phone touch & tap listeners
+window.addEventListener('touchstart', unlockSoundAndPlay, { once: true });
+window.addEventListener('click', unlockSoundAndPlay, { once: true });
 
 // Live User Counter
 let users = 1284;
