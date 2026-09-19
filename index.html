@@ -28,7 +28,7 @@ body{
 
 .header{
     text-align:center;
-    font-size:25px;
+    font-size:22px;
     font-weight:800;
     margin:10px 0 18px;
 }
@@ -48,58 +48,75 @@ body{
 
 .offer-title{
     text-align:center;
-    font-size:15px;
+    font-size:14px;
     font-weight:bold;
-    margin:12px 0;
+    margin-bottom:14px;
     color:#333;
 }
 
-.offer-image{
-    width:100%;
-    display:block;
-    border-radius:14px;
-    margin-bottom:18px;
+/* SIDE-BY-SIDE SECTION FOR MOBILE & DESKTOP */
+.offer-side-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.offer-side-section .offer-image {
+    width: 40%;
+    max-width: 140px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.offer-side-section .offer-details {
+    width: 60%;
+    text-align: left;
 }
 
 .code-title{
-    text-align:center;
-    font-size:28px;
+    font-size:18px;
     font-weight:900;
-    margin:10px 0;
+    margin-bottom:4px;
 }
 
 .subtitle{
-    text-align:center;
-    font-size:15px;
-    letter-spacing:2px;
-    margin-bottom:18px;
+    font-size:12px;
+    letter-spacing:1px;
+    margin-bottom:6px;
     color:#555;
+    font-weight:bold;
 }
 
 .stars{
-    text-align:center;
-    font-size:25px;
-    letter-spacing:4px;
-    margin-bottom:16px;
+    font-size:16px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+    color: #ffb400;
 }
 
 .claim{
     display:block;
     width:100%;
-    padding:18px 10px;
-    border-radius:12px;
+    padding:12px 8px;
+    border-radius:8px;
     background:linear-gradient(90deg,#1683ff,#005bea);
     color:white;
     text-align:center;
     text-decoration:none;
-    font-size:21px;
+    font-size:14px;
     font-weight:800;
-    box-shadow:0 5px 18px rgba(0,80,220,.25);
+    box-shadow:0 4px 12px rgba(0,80,220,.25);
 }
 
 .users{
     text-align:center;
-    margin-top:20px;
+    margin-top:15px;
     padding:16px;
     background:white;
     border-radius:12px;
@@ -147,30 +164,36 @@ body{
         LIMITED TIME GOOGLE PLAY REWARD
     </div>
 
-    <!-- IMAGE -->
-    <img
-        class="offer-image"
-        src="google-play-redeem.png"
-        alt="Google Play Redeem Code">
+    <!-- SIDE BY SIDE SECTION -->
+    <div class="offer-side-section">
+        <!-- IMAGE (Left Side) -->
+        <img
+            class="offer-image"
+            src="google-play-redeem.png"
+            alt="Google Play Redeem Code">
 
-    <div class="code-title">
-        Get ₹500 Redeem Code !!
+        <!-- CONTENT (Right Side) -->
+        <div class="offer-details">
+            <div class="code-title">
+                Get ₹500 Redeem Code !!
+            </div>
+
+            <div class="subtitle">
+                GOOGLE PLAY CODE
+            </div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <!-- TRACKING LINK -->
+            <a
+                class="claim"
+                href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
+                🎁 CLAIM CODE
+            </a>
+        </div>
     </div>
-
-    <div class="subtitle">
-        GOOGLE PLAY REDEEM CODE
-    </div>
-
-    <div class="stars">
-        ★★★★★
-    </div>
-
-    <!-- TRACKING LINK -->
-    <a
-        class="claim"
-        href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
-        🎁 CLAIM REDEEM CODE
-    </a>
 
     <div class="users">
         <div class="users-title">
