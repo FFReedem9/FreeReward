@@ -13,34 +13,53 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background: #f4f7fb;
     color: #20252d;
+    padding-bottom: 20px;
 }
 
 .container{
     width: 100%;
     max-width: 600px;
-    margin: auto;
-    padding: 14px;
+    margin: 0 auto;
+    padding: 12px;
 }
 
+/* STYLIZED PREMIUM HEADER TITLE */
 .header{
     text-align: center;
     font-size: 20px;
-    font-weight: 800;
-    margin: 10px 0 16px;
+    font-weight: 900;
+    margin: 8px 0 16px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e6ed;
     color: #111827;
+    letter-spacing: -0.3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-/* VIDEO CONTAINER */
+.header-text {
+    background: linear-gradient(135deg, #0d6efd 0%, #0044ff 50%, #111827 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 4px rgba(0, 91, 234, 0.15);
+}
+
+/* VIDEO SECTION */
 .video-box{
     width: 100%;
     background: #000;
     border-radius: 14px;
     overflow: hidden;
     margin-bottom: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .video-box video{
@@ -48,17 +67,17 @@ body{
     display: block;
 }
 
-/* MAIN OFFER CARD (EXACTLY MATCHING ORIGINAL WEBSITE) */
-.offer-box {
+/* MAIN OFFER CARD */
+.offer-card {
     background: #ffffff;
     border-radius: 16px;
-    padding: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
-    border: 1px solid #e5e7eb;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border: 1px solid #e0e6ed;
     margin-bottom: 18px;
 }
 
-/* BADGES AT TOP RIGHT */
+/* TOP RIGHT TAGS */
 .offer-tags {
     display: flex;
     justify-content: flex-end;
@@ -67,12 +86,13 @@ body{
 }
 
 .tag-yellow {
-    background: #eab308;
-    color: #ffffff;
+    background: #d4e157;
+    color: #000000;
     font-size: 10px;
     font-weight: 800;
     padding: 3px 8px;
     border-radius: 12px;
+    border: 1px solid #000;
     text-transform: uppercase;
 }
 
@@ -86,25 +106,29 @@ body{
     text-transform: uppercase;
 }
 
-/* FLEX CONTENT: IMAGE LEFT + DETAILS RIGHT */
-.offer-content {
+/* SIDE-BY-SIDE CONTENT (IMAGE LEFT, DETAILS RIGHT) */
+.offer-body {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* LEFT SIDE IMAGE */
-.offer-image {
+/* IMAGE (LEFT) */
+.offer-image-wrap {
     width: 38%;
-    max-width: 130px;
+    flex-shrink: 0;
+}
+
+.offer-image-wrap img {
+    width: 100%;
     height: auto;
     border-radius: 10px;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-/* RIGHT SIDE DETAILS */
-.offer-details {
+/* DETAILS (RIGHT) */
+.offer-info {
     width: 62%;
     display: flex;
     flex-direction: column;
@@ -114,33 +138,33 @@ body{
     font-size: 16px;
     font-weight: 900;
     color: #000000;
-    line-height: 1.25;
-    margin-bottom: 3px;
+    line-height: 1.2;
+    margin-bottom: 4px;
 }
 
 .subtitle {
     font-size: 11px;
     font-weight: 700;
-    color: #6b7280;
+    color: #666666;
     letter-spacing: 0.5px;
     margin-bottom: 4px;
 }
 
 .stars {
-    color: #f59e0b;
+    color: #ffb400;
     font-size: 14px;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
-/* CLAIM BUTTON INSIDE SIDE-BY-SIDE SECTION */
-.claim {
-    display: inline-flex;
+/* CLAIM BUTTON */
+.claim-btn {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
     width: 100%;
-    padding: 10px 6px;
+    padding: 10px 4px;
     border-radius: 8px;
     background: linear-gradient(90deg, #1683ff, #005bea);
     color: #ffffff;
@@ -148,129 +172,13 @@ body{
     text-decoration: none;
     font-size: 13px;
     font-weight: 800;
-    box-shadow: 0 4px 14px rgba(0, 91, 234, 0.35);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 91, 234, 0.3);
 }
 
-.claim:active {
+.claim-btn:active {
     transform: scale(0.98);
 }
 
-/* LIVE USERS COUNTER */
-.users{
+/* LIVE USERS BOX */
+.users-box {
     text-align: center;
-    margin-top: 18px;
-    padding: 16px;
-    background: #ffffff;
-    border-radius: 14px;
-    border: 1px solid #e5e7eb;
-}
-
-.users-title{
-    font-size: 13px;
-    color: #4b5563;
-    font-weight: 600;
-}
-
-.users-number{
-    font-size: 28px;
-    font-weight: 900;
-    color: #111827;
-    margin: 4px 0;
-}
-
-.notice{
-    text-align: center;
-    font-size: 11px;
-    color: #6b7280;
-    line-height: 1.5;
-    margin: 18px 5px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <!-- HEADER -->
-    <div class="header">
-        🤑 Watch How to Claim Redeem Code !!
-    </div>
-
-    <!-- VIDEO -->
-    <div class="video-box">
-        <video controls autoplay muted loop playsinline>
-            <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- MAIN OFFER BOX (ORIGINAL SIDE-BY-SIDE DESIGN) -->
-    <div class="offer-box">
-        
-        <!-- TOP RIGHT BADGES -->
-        <div class="offer-tags">
-            <span class="tag-yellow">LIMITED TIME</span>
-            <span class="tag-orange">FREE FIRE TOP UP</span>
-        </div>
-
-        <div class="offer-content">
-            <!-- IMAGE (LEFT) -->
-            <img class="offer-image" src="google-play-redeem.png" alt="Google Play Redeem Code">
-
-            <!-- DETAILS & BUTTON (RIGHT) -->
-            <div class="offer-details">
-                <div class="code-title">
-                    Get ₹500 Redeem Code !!
-                </div>
-
-                <div class="subtitle">
-                    GOOGLE PLAY REDEEM CODE
-                </div>
-
-                <div class="stars">
-                    ★★★★★
-                </div>
-
-                <!-- TRACKING LINK BUTTON -->
-                <a class="claim" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
-                    🎁 CLAIM REDEEM CODE
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- LIVE USERS SECTION -->
-    <div class="users">
-        <div class="users-title">
-            Live Users Claim Redeem Code
-        </div>
-
-        <div class="users-number" id="users">
-            1,284
-        </div>
-
-        <div class="users-title">
-            Live Users
-        </div>
-    </div>
-
-    <div class="notice">
-        Promotional page. Offer availability and eligibility may vary.
-    </div>
-
-</div>
-
-<script>
-let users = 1284;
-
-setInterval(function(){
-    users += Math.floor(Math.random() * 3);
-    document.getElementById("users").innerText =
-        users.toLocaleString();
-}, 5000);
-</script>
-
-</body>
-</html>
