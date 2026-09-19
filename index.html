@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unlock ₹500 Redeem Code - Free Fire Special</title>
+<title>Free Fire Elite Pass - ₹500 Google Play Reward</title>
 
 <style>
 :root {
-    --primary: #00f2fe;
-    --secondary: #4facfe;
-    --accent-orange: #ff5722;
-    --accent-yellow: #ffb400;
-    --bg-dark: #0f172a;
-    --card-bg: #1e293b;
+    --ff-neon-cyan: #00f0ff;
+    --ff-neon-orange: #ff4500;
+    --ff-gold: #ffd700;
+    --ff-bg: #060913;
+    --ff-panel: #0d1424;
+    --ff-border: #1e293b;
 }
 
 *{
@@ -23,9 +23,12 @@
 
 body{
     font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-    background: var(--bg-dark);
+    background: var(--ff-bg);
+    background-image: 
+        radial-gradient(circle at 50% 0%, #172554 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, #1e1b4b 0%, transparent 40%);
     color: #ffffff;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -37,56 +40,65 @@ body{
     padding: 12px;
 }
 
-/* LIVE TICKER POPUP */
+/* GAMING EVENT HEADER TITLE */
+.game-header {
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    border: 2px solid var(--ff-neon-cyan);
+    border-radius: 14px;
+    padding: 14px;
+    text-align: center;
+    margin-bottom: 12px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+.game-header h1 {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #00f0ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.game-header p {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+/* LIVE TICKER */
 .ticker {
-    background: rgba(16, 185, 129, 0.15);
+    background: rgba(16, 185, 129, 0.12);
     border: 1px solid #10b981;
-    color: #10b981;
+    color: #34d399;
     padding: 8px 12px;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 11px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 10px;
 }
 
-/* STOCK ALERT BAR (FOMO) */
+/* URGENCY STOCK BAR */
 .stock-bar {
-    background: linear-gradient(90deg, #dc2626, #b91c1c);
+    background: linear-gradient(90deg, #991b1b, #dc2626);
     color: #fff;
     text-align: center;
     font-size: 11px;
     font-weight: 800;
-    padding: 6px;
+    padding: 7px;
     border-radius: 8px;
     margin-bottom: 12px;
-    box-shadow: 0 0 10px rgba(220, 38, 38, 0.5);
-}
-
-/* HEADER TITLE */
-.header{
-    text-align: center;
-    font-size: 19px;
-    font-weight: 900;
-    margin-bottom: 12px;
-    padding: 12px;
-    background: linear-gradient(135deg, rgba(30,41,59,0.9), rgba(15,23,42,0.9));
-    border-radius: 14px;
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
-    border: 1px solid rgba(0, 242, 254, 0.3);
-    color: #ffffff;
-}
-
-.header span {
-    background: linear-gradient(90deg, #00f2fe, #ff5722);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
 }
 
 /* TIMER BAR */
 .timer-bar {
-    background: #ef4444;
-    color: white;
+    background: #1e293b;
+    border: 1px solid #ef4444;
+    color: #fca5a5;
     text-align: center;
     font-weight: 800;
     font-size: 12px;
@@ -95,16 +107,16 @@ body{
     margin-bottom: 12px;
 }
 
-/* VIDEO CONTAINER WITH TOUCH MASK */
+/* VIDEO CONTAINER WITH GAMING BORDER */
 .video-box{
     position: relative;
     width: 100%;
     background: #000;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
     margin-bottom: 16px;
-    border: 2px solid #00f2fe;
-    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    border: 2px solid var(--ff-neon-orange);
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.35);
 }
 
 .video-box video{
@@ -125,15 +137,15 @@ body{
 
 .unmute-badge {
     position: absolute;
-    top: 12px;
-    right: 12px;
-    background: rgba(255, 87, 34, 0.95);
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 69, 0, 0.95);
     color: #ffffff;
-    padding: 8px 14px;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 800;
-    box-shadow: 0 0 12px rgba(255, 87, 34, 0.9);
+    font-size: 11px;
+    font-weight: 900;
+    box-shadow: 0 0 12px var(--ff-neon-orange);
     animation: soundPulse 1.2s infinite;
     z-index: 10;
     pointer-events: none;
@@ -141,18 +153,18 @@ body{
 
 @keyframes soundPulse {
     0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
+    50% { transform: scale(1.06); }
     100% { transform: scale(1); }
 }
 
-/* MAIN OFFER CARD */
+/* REWARD CARD - GAMING ITEM STYLE */
 .offer-card {
-    background: var(--card-bg);
-    border-radius: 16px;
+    background: var(--ff-panel);
+    border-radius: 14px;
     padding: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    margin-bottom: 18px;
+    border: 2px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    margin-bottom: 16px;
 }
 
 .offer-tags {
@@ -162,23 +174,23 @@ body{
     margin-bottom: 10px;
 }
 
-.tag-yellow {
-    background: #eab308;
+.tag-gold {
+    background: var(--ff-gold);
     color: #000;
     font-size: 9px;
     font-weight: 900;
     padding: 3px 8px;
-    border-radius: 12px;
+    border-radius: 4px;
     text-transform: uppercase;
 }
 
-.tag-orange {
-    background: var(--accent-orange);
-    color: #fff;
+.tag-cyan {
+    background: var(--ff-neon-cyan);
+    color: #000;
     font-size: 9px;
     font-weight: 900;
     padding: 3px 8px;
-    border-radius: 12px;
+    border-radius: 4px;
     text-transform: uppercase;
 }
 
@@ -196,10 +208,10 @@ body{
 .offer-image-wrap img {
     width: 100%;
     height: auto;
-    border-radius: 12px;
+    border-radius: 10px;
     display: block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+    border: 1px solid var(--ff-neon-cyan);
 }
 
 .offer-info {
@@ -209,7 +221,7 @@ body{
 }
 
 .code-title {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 900;
     color: #ffffff;
     line-height: 1.2;
@@ -219,13 +231,13 @@ body{
 .subtitle {
     font-size: 11px;
     font-weight: 700;
-    color: #94a3b8;
+    color: var(--ff-neon-cyan);
     margin-bottom: 4px;
 }
 
 .stars {
-    color: var(--accent-yellow);
-    font-size: 14px;
+    color: var(--ff-gold);
+    font-size: 13px;
     margin-bottom: 10px;
 }
 
@@ -236,15 +248,15 @@ body{
     gap: 6px;
     width: 100%;
     padding: 12px 6px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #ff5722, #ff8c00);
-    color: #ffffff;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff4500, #ffd700);
+    color: #000000;
     text-align: center;
     text-decoration: none;
     font-size: 13px;
     font-weight: 900;
     text-transform: uppercase;
-    box-shadow: 0 0 15px rgba(255, 87, 34, 0.6);
+    box-shadow: 0 0 20px rgba(255, 69, 0, 0.6);
     animation: btnPulse 1.5s infinite;
 }
 
@@ -254,59 +266,59 @@ body{
     100% { transform: scale(1); }
 }
 
-/* LIVE USERS */
+/* LIVE PLAYERS COUNTER */
 .users-box {
     text-align: center;
-    padding: 16px;
-    background: var(--card-bg);
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px;
+    background: var(--ff-panel);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
     margin-bottom: 16px;
 }
 
 .users-title {
-    font-size: 12px;
+    font-size: 11px;
     color: #94a3b8;
     font-weight: 600;
 }
 
 .users-number {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 900;
-    color: #00f2fe;
+    color: var(--ff-neon-cyan);
     margin: 4px 0;
 }
 
-/* REVIEWS SECTION FOR TRUST BUILD */
+/* ROTATING FEEDBACK */
 .reviews-card {
-    background: var(--card-bg);
-    border-radius: 14px;
+    background: var(--ff-panel);
+    border-radius: 12px;
     padding: 14px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(0, 240, 255, 0.2);
     margin-bottom: 16px;
 }
 
 .reviews-title {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 800;
-    color: #00f2fe;
+    color: var(--ff-neon-cyan);
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .review-item {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 8px 0;
+    padding: 4px 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.review-item:last-child {
-    border-bottom: none;
+.fade-out {
+    opacity: 0;
 }
 
 .review-user {
     font-size: 12px;
     font-weight: 700;
-    color: #ffb400;
+    color: var(--ff-gold);
 }
 
 .review-text {
@@ -327,6 +339,11 @@ body{
 
 <div class="container">
 
+    <div class="game-header">
+        <h1>⚡ FREE FIRE ELITE REWARD CENTER ⚡</h1>
+        <p>Claim Your Official ₹500 Google Play Code Instantly</p>
+    </div>
+
     <div class="ticker" id="ticker">
         🔥 Recent Claim: <span id="recent-user">Aman_FF</span> just claimed ₹500 Code!
     </div>
@@ -335,20 +352,15 @@ body{
         ⚠️ ONLY <span id="stock-count">7</span> REDEEM CODES LEFT TODAY!
     </div>
 
-    <div class="header">
-        🤑 <span>Watch & Claim ₹500 Redeem Code !!</span>
-    </div>
-
     <div class="timer-bar">
-        ⚡ LIMITED TIME OFFER: EXPIRES IN <span id="timer">04:59</span> MINS
+        ⏳ EVENT ENDS IN: <span id="timer">04:59</span> MINS
     </div>
 
     <div class="video-box" id="videoBox">
         <div class="unmute-badge" id="unmuteBadge">
-            🔊 Tap Anywhere For Sound
+            🔊 Tap For Sound
         </div>
         <div class="video-touch-mask"></div>
-        <!-- Aapki original video file yahan set hai -->
         <video id="myVideo" autoplay muted loop playsinline preload="auto">
             <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
         </video>
@@ -356,8 +368,8 @@ body{
 
     <div class="offer-card">
         <div class="offer-tags">
-            <span class="tag-yellow">LIMITED TIME</span>
-            <span class="tag-orange">FREE FIRE TOP UP</span>
+            <span class="tag-gold">ELITE REWARD</span>
+            <span class="tag-cyan">100% VERIFIED</span>
         </div>
 
         <div class="offer-body">
@@ -370,11 +382,11 @@ body{
 
             <div class="offer-info">
                 <div class="code-title">
-                    Get ₹500 Redeem Code !!
+                    ₹500 Google Play Code
                 </div>
 
                 <div class="subtitle">
-                    GOOGLE PLAY REDEEM CODE
+                    FREE FIRE TOP-UP
                 </div>
 
                 <div class="stars">
@@ -382,7 +394,7 @@ body{
                 </div>
 
                 <a class="claim-btn" id="claimBtn" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
-                    🎁 CLAIM REDEEM CODE
+                    🎁 CLAIM CODE NOW
                 </a>
             </div>
         </div>
@@ -390,34 +402,26 @@ body{
 
     <div class="users-box">
         <div class="users-title">
-            🟢 Active Live Users Claiming Right Now
+            🟢 Players Online & Claiming
         </div>
         <div class="users-number" id="users">
             1,284
         </div>
         <div class="users-title">
-            Verified Claims Today
+            Successful Redemptions Today
         </div>
     </div>
 
     <div class="reviews-card">
-        <div class="reviews-title">💬 Live User Feedback</div>
-        <div class="review-item">
-            <div class="review-user">★ Sameer_FF (Verified)</div>
-            <div class="review-text">Bhai sach me 500 ka code mil gaya video dekhne ke baad! 🔥</div>
-        </div>
-        <div class="review-item">
-            <div class="review-user">★ GamingWithRohan</div>
-            <div class="review-text">Mera Free Fire weekly pass buy ho gaya, thanks bro! 🎁</div>
-        </div>
-        <div class="review-item">
-            <div class="review-user">★ OP_Rajesh</div>
-            <div class="review-text">Fast delivery, 2 minute me redeem kar liya.</div>
+        <div class="reviews-title">💬 Live Player Feedback</div>
+        <div id="feedback-container" class="review-item">
+            <div class="review-user" id="fb-user">★ Sameer_FF (Verified)</div>
+            <div class="review-text" id="fb-text">Bhai sach me 500 ka code mil gaya video dekhne ke baad! 🔥</div>
         </div>
     </div>
 
     <div class="notice">
-        Promotional page. Offer availability and eligibility may vary.
+        Promotional gaming event page. Rewards subject to daily availability.
     </div>
 
 </div>
@@ -447,18 +451,49 @@ function unlockSoundAndPlay() {
 window.addEventListener('touchstart', unlockSoundAndPlay, { once: true });
 window.addEventListener('click', unlockSoundAndPlay, { once: true });
 
+// Live User Counter
 let users = 1284;
 setInterval(function(){
     users += Math.floor(Math.random() * 4) + 1;
     document.getElementById("users").innerText = users.toLocaleString();
 }, 4000);
 
+// Fake Recent Claims Ticker
 const names = ["Rahul_FF", "Op_Gaming", "Viper_88", "Sameer_Pro", "Karan_007", "Rohan_Pro", "Sumit_Gamer"];
 setInterval(function(){
     const randomName = names[Math.floor(Math.random() * names.length)];
     document.getElementById("recent-user").innerText = randomName;
 }, 3500);
 
+// Rotating Feedback List
+const feedbacks = [
+    { user: "★ Sameer_FF (Verified)", text: "Bhai sach me 500 ka code mil gaya video dekhne ke baad! 🔥" },
+    { user: "★ GamingWithRohan", text: "Mera Free Fire weekly pass buy ho gaya, thanks bro! 🎁" },
+    { user: "★ OP_Rajesh", text: "Fast delivery, 2 minute me redeem kar liya." },
+    { user: "★ Amit_Gamer99", text: "Working trick hai guys, sabhi log try karo jaldi!" },
+    { user: "★ Sneha_FF", text: "Mujhe laga fake hoga par code work kar gaya. Omg! 😍" },
+    { user: "★ Karan_Pro", text: "Ek number website hai, 500 ka Google Play code mil gaya." },
+    { user: "★ Vicky_VIP", text: "Top up successful ho gaya bhai, thanks a lot!" }
+];
+
+let fbIndex = 0;
+setInterval(function() {
+    const userEl = document.getElementById("fb-user");
+    const textEl = document.getElementById("fb-text");
+    const container = document.getElementById("feedback-container");
+
+    if(userEl && textEl && container) {
+        container.classList.add("fade-out");
+        setTimeout(() => {
+            fbIndex = (fbIndex + 1) % feedbacks.length;
+            userEl.innerText = feedbacks[fbIndex].user;
+            textEl.innerText = feedbacks[fbIndex].text;
+            container.classList.remove("fade-out");
+        }, 500);
+    }
+}, 4000);
+
+// Decrement Stock Counter
 let stock = 7;
 setInterval(function(){
     if(stock > 2) {
@@ -467,6 +502,7 @@ setInterval(function(){
     }
 }, 9000);
 
+// Timer Script
 let time = 299;
 setInterval(function(){
     let minutes = Math.floor(time / 60);
