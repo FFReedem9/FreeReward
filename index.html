@@ -26,7 +26,7 @@ body{
     padding: 12px;
 }
 
-/* STYLIZED PREMIUM HEADER TITLE */
+/* STYLIZED HEADER TITLE */
 .header{
     text-align: center;
     font-size: 20px;
@@ -38,7 +38,6 @@ body{
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border: 1px solid #e0e6ed;
     color: #111827;
-    letter-spacing: -0.3px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +48,6 @@ body{
     background: linear-gradient(135deg, #0d6efd 0%, #0044ff 50%, #111827 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0px 2px 4px rgba(0, 91, 234, 0.15);
 }
 
 /* VIDEO SECTION */
@@ -113,7 +111,6 @@ body{
     gap: 12px;
 }
 
-/* IMAGE (LEFT) */
 .offer-image-wrap {
     width: 38%;
     flex-shrink: 0;
@@ -127,7 +124,6 @@ body{
     object-fit: contain;
 }
 
-/* DETAILS (RIGHT) */
 .offer-info {
     width: 62%;
     display: flex;
@@ -182,3 +178,121 @@ body{
 /* LIVE USERS BOX */
 .users-box {
     text-align: center;
+    padding: 16px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e0e6ed;
+    margin-bottom: 16px;
+}
+
+.users-title {
+    font-size: 13px;
+    color: #555555;
+    font-weight: 600;
+}
+
+.users-number {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111111;
+    margin: 4px 0;
+}
+
+.notice {
+    text-align: center;
+    font-size: 11px;
+    color: #777777;
+    line-height: 1.5;
+    margin: 10px 5px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- STYLIZED HEADER TITLE -->
+    <div class="header">
+        <span>🤑</span>
+        <span class="header-text">Watch How to Claim Redeem Code !!</span>
+    </div>
+
+    <!-- VIDEO PLAYER -->
+    <div class="video-box">
+        <video controls autoplay muted loop playsinline>
+            <source src="GIFT-CARD-OFFER-TELEGRAM-CHANNEL-WEBSITE-VIDEO-500rs-redeem-code 11.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- MAIN CARD -->
+    <div class="offer-card">
+        
+        <!-- TAGS AT TOP RIGHT -->
+        <div class="offer-tags">
+            <span class="tag-yellow">LIMITED TIME</span>
+            <span class="tag-orange">FREE FIRE TOP UP</span>
+        </div>
+
+        <div class="offer-body">
+            <!-- IMAGE ON LEFT -->
+            <div class="offer-image-wrap">
+                <img src="google-play-redeem.jpg" alt="Google Play Redeem Code">
+            </div>
+
+            <!-- DETAILS & BUTTON ON RIGHT -->
+            <div class="offer-info">
+                <div class="code-title">
+                    Get ₹500 Redeem Code !!
+                </div>
+
+                <div class="subtitle">
+                    GOOGLE PLAY REDEEM CODE
+                </div>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <!-- REDIRECT CLAIM BUTTON -->
+                <a class="claim-btn" href="https://wp.tracksla.com/pr/?o=202601&a=2425&m=1885&clickid=7">
+                    🎁 CLAIM REDEEM CODE
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LIVE USERS COUNTER -->
+    <div class="users-box">
+        <div class="users-title">
+            Live Users Claim Redeem Code
+        </div>
+
+        <div class="users-number" id="users">
+            1,284
+        </div>
+
+        <div class="users-title">
+            Live Users
+        </div>
+    </div>
+
+    <div class="notice">
+        Promotional page. Offer availability and eligibility may vary.
+    </div>
+
+</div>
+
+<script>
+let users = 1284;
+
+setInterval(function(){
+    users += Math.floor(Math.random() * 3);
+    document.getElementById("users").innerText =
+        users.toLocaleString();
+}, 5000);
+</script>
+
+</body>
+</html>
